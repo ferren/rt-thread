@@ -129,7 +129,15 @@ RT_WEAK void rt_hw_board_init()
     /* enable interrupt */
     __set_PRIMASK(0);
     /* System clock initialization */
+#ifndef RT_USING_BOARD_INIT
     SystemClock_Config();
+#elif
+    rt_uint8_t index = 0;
+    while (board_init[index]) {
+        board_init[index]();
+        index++;
+    }
+#endif
     /* disable interrupt */
     __set_PRIMASK(1);
 
