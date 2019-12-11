@@ -160,6 +160,9 @@
 
 /* samples: kernel and components samples */
 
+#define PKG_USING_PERIPHERAL_SAMPLES
+#define PKG_USING_PERIPHERAL_SAMPLES_V040
+#define PERIPHERAL_SAMPLES_USING_ADC
 #define SOC_FAMILY_STM32
 #define SOC_SERIES_STM32F1
 

@@ -15,6 +15,8 @@
 /* defined the LED0 pin: PB1 */
 #define LED0_PIN    GET_PIN(C, 9)
 
+extern IWDG_HandleTypeDef hiwdg;
+
 int main(void)
 {
     int count = 1;
@@ -27,6 +29,8 @@ int main(void)
         rt_thread_mdelay(500);
         rt_pin_write(LED0_PIN, PIN_LOW);
         rt_thread_mdelay(500);
+
+        HAL_IWDG_Refresh(&hiwdg);
     }
 
     return RT_EOK;
