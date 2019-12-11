@@ -16,6 +16,8 @@
 #include "drv_common.h"
 #include "drv_gpio.h"
 
+#include "stm32f1xx_hal.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -42,6 +44,11 @@ extern int __bss_end;
 #define HEAP_END        STM32_SRAM_END
 
 void SystemClock_Config(void);
+extern void (*board_init[])(void);
+
+/* Private defines -----------------------------------------------------------*/
+#define OPEN_DOOR_Pin GPIO_PIN_9
+#define OPEN_DOOR_GPIO_Port GPIOC
 
 #ifdef __cplusplus
 }
