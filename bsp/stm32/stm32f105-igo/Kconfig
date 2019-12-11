@@ -15,7 +15,7 @@ config PKGS_DIR
     option env="PKGS_ROOT"
     default "packages"
 
-config USING_BOARD_INIT
+config RT_USING_BOARD_INIT
     bool "USING BOARD INIT"
     select RT_USING_BOARD_INIT
     default y

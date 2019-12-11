@@ -4,7 +4,7 @@
 /* Automatically generated file; DO NOT EDIT. */
 /* RT-Thread Configuration */
 
-#define USING_BOARD_INIT
+#define RT_USING_BOARD_INIT
 
 /* RT-Thread Kernel */
 
