@@ -1,0 +1,4 @@
+r
+loadbin rtthread.bin 0x8000000
+g
+exit

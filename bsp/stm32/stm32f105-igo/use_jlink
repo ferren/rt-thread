@@ -1,0 +1,2 @@
+#!/bin/bash
+JLinkExe -device STM32F105RC -if SWD -speed 4000 -autoconnect 1 -CommanderScript ./loadbin
